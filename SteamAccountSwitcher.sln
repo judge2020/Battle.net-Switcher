@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamAccountSwitcher", "SteamAccountSwitcher\SteamAccountSwitcher.csproj", "{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}"
 EndProject
+Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "BnetSwitcherSetup", "BnetSwitcherSetup\BnetSwitcherSetup.isproj", "{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12} = {87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -13,15 +18,49 @@ Global
 		Debug|Default = Debug|Default
 		DVD-5|Any CPU = DVD-5|Any CPU
 		DVD-5|Default = DVD-5|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|Default = SingleImage|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.CD_ROM|Default.ActiveCfg = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.CD_ROM|Default.Build.0 = Debug|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Debug|Default.Build.0 = Debug|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
 		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.DVD-5|Default.ActiveCfg = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.DVD-5|Default.Build.0 = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Release|Default.ActiveCfg = Release|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.Release|Default.Build.0 = Release|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.SingleImage|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.SingleImage|Any CPU.Build.0 = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.SingleImage|Default.ActiveCfg = Debug|Any CPU
+		{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}.SingleImage|Default.Build.0 = Debug|Any CPU
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.CD_ROM|Any CPU.ActiveCfg = Release
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.CD_ROM|Any CPU.Build.0 = Release
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.CD_ROM|Default.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.CD_ROM|Default.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Debug|Any CPU.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Debug|Any CPU.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Debug|Default.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Debug|Default.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.DVD-5|Any CPU.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.DVD-5|Any CPU.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.DVD-5|Default.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.DVD-5|Default.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Release|Any CPU.ActiveCfg = Release
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Release|Default.ActiveCfg = Release
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.Release|Default.Build.0 = Release
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.SingleImage|Any CPU.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.SingleImage|Any CPU.Build.0 = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.SingleImage|Default.ActiveCfg = Debug
+		{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}.SingleImage|Default.Build.0 = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,14 +70,6 @@ Global
 		CD_ROM|Default = CD_ROM|Default
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Default = Debug|Default
-	EndGlobalSection
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		CD_ROM|Any CPU = CD_ROM|Any CPU
-		CD_ROM|Default = CD_ROM|Default
-		Debug|Any CPU = Debug|Any CPU
-		Debug|Default = Debug|Default
-		Release|Any CPU = Release|Any CPU
-		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
