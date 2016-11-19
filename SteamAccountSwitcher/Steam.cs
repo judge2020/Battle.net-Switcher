@@ -44,6 +44,8 @@ namespace SteamAccountSwitcher
         }
 
 
+
+
         public bool LogoutSteam()
         {
             //Process.Start(installDir, " --exec = \"logout\"");

@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject>Blank Project Template</subject>
+		<subject>Battle.net Switcher</subject>
 		<author>##COMPANY_NAME##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -341,6 +341,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>AllOtherFiles</td><td>{8388CFD5-6A57-47FF-B2EF-C8950E6AC43C}</td><td>INSTALLDIR</td><td>8</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SteamAccountSwitcher.Primary_output</td><td>{1ACE5AEF-593B-4068-8293-8D2946A94C8B}</td><td>INSTALLDIR</td><td>8</td><td/><td>steamaccountswitcher.primary</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SteamAccountSwitcher.Source_Files</td><td>{FD56A4ED-305D-470F-AF31-F58A6E15E1D0}</td><td>INSTALLDIR</td><td>8</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1010,6 +1011,7 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>INSTALLDIR</td><td>AllOtherFiles</td></row>
 		<row><td>INSTALLDIR</td><td>SteamAccountSwitcher.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SteamAccountSwitcher.Source_Files</td></row>
 	</table>
@@ -1820,6 +1822,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>BnetSwitcherSetup_Files</td><td>AllOtherFiles</td></row>
 		<row><td>BnetSwitcherSetup_Files</td><td>SteamAccountSwitcher.Primary_output</td></row>
 		<row><td>BnetSwitcherSetup_Files</td><td>SteamAccountSwitcher.Source_Files</td></row>
 	</table>
@@ -1836,6 +1839,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>main.ahk</td><td>AllOtherFiles</td><td>main.ahk</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;VSSolutionFolder&gt;\SteamAccountSwitcher\main.ahk</td><td>1</td><td/></row>
 		<row><td>steamaccountswitcher.primary</td><td>SteamAccountSwitcher.Primary_output</td><td>SteamAccountSwitcher.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SteamAccountSwitcher&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
@@ -1852,6 +1856,10 @@
 	<table name="ISAssistantTag">
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
+		<row><td>BiildCDROMEnabled</td><td/></row>
+		<row><td>BiildInternetEnabled</td><td/></row>
+		<row><td>BiildSingleExeEnabled</td><td>Yes</td></row>
+		<row><td>BiildSingleMSIEnabled</td><td/></row>
 		<row><td>PROJECT_ASSISTANT_DEFAULT_FEATURE</td><td>BnetSwitcherSetup_Files</td></row>
 		<row><td>PROJECT_ASSISTANT_FEATURES</td><td>NonSelectable</td></row>
 		<row><td>_Built</td><td/></row>
@@ -1981,6 +1989,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>AllOtherFiles</td><td/><td/><td>_6421A949_AFDF_41A0_86CE_0F00FD807BF2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SteamAccountSwitcher.Primary_output</td><td/><td/><td>_ED62E24E_8549_44B8_BC61_080BFEB646ED_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SteamAccountSwitcher.Source_Files</td><td/><td/><td>_B9FE0F68_29F5_4FBA_AC8B_8B3246BF4012_FILTER</td><td/><td/><td/><td/></row>
 	</table>
@@ -2298,6 +2307,7 @@
 		<col def="S255">ProductConfigurationFlags</col>
 		<col def="I4">GeneratePackageCode</col>
 		<row><td>Default Configuration</td><td/><td>1</td></row>
+		<row><td>PROJECT_ASSISTANT</td><td/><td>1</td></row>
 	</table>
 
 	<table name="ISProductConfigurationInstance">
@@ -2313,6 +2323,8 @@
 		<col def="L255">Value</col>
 		<row><td>Default Configuration</td><td>IncludeActionHelp</td><td>1</td></row>
 		<row><td>Default Configuration</td><td>SetupFileName</td><td>setup</td></row>
+		<row><td>PROJECT_ASSISTANT</td><td>IncludeActionHelp</td><td>1</td></row>
+		<row><td>PROJECT_ASSISTANT</td><td>SetupFileName</td><td>setup</td></row>
 	</table>
 
 	<table name="ISRelease">
@@ -2348,6 +2360,8 @@
 		<col def="I4">ISSetupPrerequisiteLocation</col>
 		<row><td>Debug</td><td>Default Configuration</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>2</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>8464397</td><td/><td/><td/><td/></row>
 		<row><td>Release</td><td>Default Configuration</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>2</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>8464397</td><td/><td/><td/><td/></row>
+		<row><td>SINGLE_EXE_IMAGE</td><td>PROJECT_ASSISTANT</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>8464397</td><td/><td/><td/><td/></row>
+		<row><td>SingleImage</td><td>Default Configuration</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>8464397</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISReleaseASPublishInfo">
@@ -2390,6 +2404,8 @@
 		<col def="S255">CertPassword</col>
 		<row><td>Debug</td><td>Default Configuration</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td/><td>http://www.installengine.com/cert05/isengine</td><td/><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td>16</td><td>3</td><td>16</td><td>http://www.installengine.com/Msiengine30</td><td/></row>
 		<row><td>Release</td><td>Default Configuration</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td/><td>http://www.installengine.com/cert05/isengine</td><td/><td/><td/><td/><td>2</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>2</td><td>1033</td><td/><td/><td/><td/><td>16</td><td>3</td><td>16</td><td>http://www.installengine.com/Msiengine30</td><td/></row>
+		<row><td>SINGLE_EXE_IMAGE</td><td>PROJECT_ASSISTANT</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>1</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td/><td>http://www.installengine.com/cert05/isengine</td><td/><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td>24</td><td>3</td><td>16</td><td>http://www.installengine.com/Msiengine30</td><td/></row>
+		<row><td>SingleImage</td><td>Default Configuration</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>1</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td/><td>http://www.installengine.com/cert05/isengine</td><td/><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td>1040</td><td>3</td><td>16</td><td>http://www.installengine.com/Msiengine30</td><td/></row>
 	</table>
 
 	<table name="ISReleaseProperty">
@@ -2591,7 +2607,6 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_FB0DA360_B33B_4411_B6A6_F08B5E133D4F_</td><td>Microsoft .NET Framework 4.0 Full (Web Download).prq</td><td/><td/><td/></row>
 	</table>
 
 	<table name="ISStorages">
@@ -3942,8 +3957,8 @@
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1033</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="4b00b795ba16b41c1637c4298a4cc781">
-UgBlAGwAZQBhAHMAZQABAEQAZQBmAGEAdQBsAHQAIABDAG8AbgBmAGkAZwB1AHIAYQB0AGkAbwBuAA==
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="d795737175c501d5ddfcb40706222d3f">
+UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARABlAGYAYQB1AGwAdAAgAEMAbwBuAGYAaQBnAHUAcgBhAHQAaQBvAG4A
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Default Configuration</td></row>
 		<row><td>EnableSwidtag</td><td>1</td></row>
@@ -4330,7 +4345,7 @@ UgBlAGwAZQBhAHMAZQABAEQAZQBmAGEAdQBsAHQAIABDAG8AbgBmAGkAZwB1AHIAYQB0AGkAbwBuAA==
 		<row><td>ProductCode</td><td>{D65C956A-04F7-4790-8640-7AF3B7F6E31B}</td><td/></row>
 		<row><td>ProductID</td><td>none</td><td/></row>
 		<row><td>ProductLanguage</td><td>1033</td><td/></row>
-		<row><td>ProductName</td><td>BnetSwitcherSetup</td><td/></row>
+		<row><td>ProductName</td><td>Battle.net Switcher</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
