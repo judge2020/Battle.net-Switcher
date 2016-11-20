@@ -49,8 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>bnet.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -85,6 +84,7 @@
     <Compile Include="AddAccount.xaml.cs">
       <DependentUpon>AddAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Crypto.cs" />
     <Compile Include="DownloadMissing.cs" />
     <Compile Include="Steam.cs" />
     <Compile Include="SteamAccount.cs" />
