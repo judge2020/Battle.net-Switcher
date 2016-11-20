@@ -27,7 +27,6 @@ Send ^a
 Send {BS}
 send %email%
 sleep 20
-send {Enter}
 Sleep 100
 Click 322, 215
 Sleep 20
