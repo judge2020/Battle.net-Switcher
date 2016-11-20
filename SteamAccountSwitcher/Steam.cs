@@ -71,10 +71,15 @@ namespace SteamAccountSwitcher
             {
                 LogoutSteam();
             }
+            if (DownloadMissing.CheckIfMissing())
+            {
+                DownloadMissing.Download();
+            }
             Process ahk = new Process {StartInfo = new ProcessStartInfo("main.ahk", b.Username + " " + b.Password)};
             ahk.Start();
             return true;
         }
+
 
         
     }

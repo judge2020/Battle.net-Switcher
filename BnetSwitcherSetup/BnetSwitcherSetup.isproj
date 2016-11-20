@@ -29,8 +29,8 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015\InstallShield.targets"/>
 	<ItemGroup>
-		<ProjectReference Include="..\SteamAccountSwitcher\SteamAccountSwitcher.csproj">
-			<Name>SteamAccountSwitcher</Name>
+		<ProjectReference Include="..\SteamAccountSwitcher\Battle.net switcher.csproj">
+			<Name>Battle.net switcher</Name>
 			<Project>{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}</Project>
 		</ProjectReference>
 	</ItemGroup>

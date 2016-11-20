@@ -342,7 +342,8 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>AllOtherFiles</td><td>{8388CFD5-6A57-47FF-B2EF-C8950E6AC43C}</td><td>INSTALLDIR</td><td>8</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SteamAccountSwitcher.Primary_output</td><td>{1ACE5AEF-593B-4068-8293-8D2946A94C8B}</td><td>INSTALLDIR</td><td>8</td><td/><td>steamaccountswitcher.primary</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Battle.net_switcher.Primary_output</td><td>{EB33650B-E1E0-4499-9CCD-2B9AA1F9F045}</td><td>INSTALLDIR</td><td>8</td><td/><td>battle.net_switcher.primary_</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SteamAccountSwitcher.Primary_output</td><td>{1ACE5AEF-593B-4068-8293-8D2946A94C8B}</td><td>INSTALLDIR</td><td>8</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SteamAccountSwitcher.Source_Files</td><td>{FD56A4ED-305D-470F-AF31-F58A6E15E1D0}</td><td>INSTALLDIR</td><td>8</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1012,6 +1013,7 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>AllOtherFiles</td></row>
+		<row><td>INSTALLDIR</td><td>Battle.net_switcher.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SteamAccountSwitcher.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>SteamAccountSwitcher.Source_Files</td></row>
 	</table>
@@ -1029,7 +1031,7 @@
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
-		<row><td>IS_LAUNCH_MY_PROGRAM_PLEASE</td><td>210</td><td>steamaccountswitcher.primary</td><td/><td/><td/></row>
+		<row><td>IS_LAUNCH_MY_PROGRAM_PLEASE</td><td>210</td><td>battle.net_switcher.primary_</td><td/><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
@@ -1128,6 +1130,7 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
+		<row><td>battle_1.net_battle.net_switcher</td><td>judge2_1_judge2020</td><td>BATTLE~1.NET|Battle.net Switcher</td><td/><td>1</td><td/></row>
 		<row><td>bnetsw_1_bnetswitchersetup</td><td>judge2_1_judge2020</td><td>BNETSW~1|BnetSwitcherSetup</td><td/><td>1</td><td/></row>
 		<row><td>judge2_1_judge2020</td><td>ProgramMenuFolder</td><td>JUDGE2~1|Judge2020</td><td/><td>1</td><td/></row>
 	</table>
@@ -1823,6 +1826,7 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>BnetSwitcherSetup_Files</td><td>AllOtherFiles</td></row>
+		<row><td>BnetSwitcherSetup_Files</td><td>Battle.net_switcher.Primary_output</td></row>
 		<row><td>BnetSwitcherSetup_Files</td><td>SteamAccountSwitcher.Primary_output</td></row>
 		<row><td>BnetSwitcherSetup_Files</td><td>SteamAccountSwitcher.Source_Files</td></row>
 	</table>
@@ -1839,8 +1843,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>battle.net_switcher.primary_</td><td>Battle.net_switcher.Primary_output</td><td>Battle.net switcher.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Battle.net switcher&gt;|Built</td><td>3</td><td/></row>
 		<row><td>main.ahk</td><td>AllOtherFiles</td><td>main.ahk</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;VSSolutionFolder&gt;\SteamAccountSwitcher\main.ahk</td><td>1</td><td/></row>
-		<row><td>steamaccountswitcher.primary</td><td>SteamAccountSwitcher.Primary_output</td><td>SteamAccountSwitcher.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;SteamAccountSwitcher&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -1863,6 +1867,7 @@
 		<row><td>PROJECT_ASSISTANT_DEFAULT_FEATURE</td><td>BnetSwitcherSetup_Files</td></row>
 		<row><td>PROJECT_ASSISTANT_FEATURES</td><td>NonSelectable</td></row>
 		<row><td>_Built</td><td/></row>
+		<row><td>_Built2</td><td/></row>
 	</table>
 
 	<table name="ISBillBoard">
@@ -1990,6 +1995,7 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>AllOtherFiles</td><td/><td/><td>_6421A949_AFDF_41A0_86CE_0F00FD807BF2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Battle.net_switcher.Primary_output</td><td/><td/><td>_52A3AFA7_AAB5_4659_AF64_22DE75116306_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SteamAccountSwitcher.Primary_output</td><td/><td/><td>_ED62E24E_8549_44B8_BC61_080BFEB646ED_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SteamAccountSwitcher.Source_Files</td><td/><td/><td>_B9FE0F68_29F5_4FBA_AC8B_8B3246BF4012_FILTER</td><td/><td/><td/><td/></row>
 	</table>
@@ -2291,6 +2297,7 @@
 		<col def="S255">Value</col>
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
+		<row><td>Battle.net switcher</td><td>SteamAccountSwitcher\Battle.net switcher.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
@@ -3438,6 +3445,7 @@
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1126393376</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1650187648</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Battle.net switcher</td><td>0</td><td/><td>-1650169216</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Battle.net Switcher</td><td>0</td><td/><td>-1650155691</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1126393376</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1126393376</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1126393376</td></row>
@@ -3842,8 +3850,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
-		<row><td>_Built1_CB2F1246A1F14720B8A48C74232197E4.exe</td><td/><td>&lt;VSSolutionFolder&gt;\SteamAccountSwitcher\bnet.ico</td><td>0</td></row>
-		<row><td>_Built_94EE4EF80A8B46E6AEE772A49842A75D.exe</td><td/><td>&lt;VSSolutionFolder&gt;\SteamAccountSwitcher\bnet.ico</td><td>0</td></row>
+		<row><td>_Built2_4625157948FE4DCCB2BC7AD279534D65.exe</td><td/><td>&lt;VSSolutionFolder&gt;\SteamAccountSwitcher\bnet.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4421,7 +4428,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARABlAGYAYQB1AGwAdAAgAEMAbwBuAGYAaQBnAHUAcgBhAHQA
 		<col def="i2">InstallMode</col>
 		<row><td>FileKey1</td><td>SteamAccountSwitcher.Primary_output</td><td/><td>judge2_1_judge2020</td><td>2</td></row>
 		<row><td>FileKey2</td><td>SteamAccountSwitcher.Primary_output</td><td/><td>bnetsw_1_bnetswitchersetup</td><td>2</td></row>
-		<row><td>_Built</td><td>SteamAccountSwitcher.Primary_output</td><td/><td>bnetsw_1_bnetswitchersetup</td><td>2</td></row>
+		<row><td>FileKey3</td><td>Battle.net_switcher.Primary_output</td><td/><td>battle_1.net_battle.net_switcher</td><td>2</td></row>
+		<row><td>_Built2</td><td>Battle.net_switcher.Primary_output</td><td/><td>battle_1.net_battle.net_switcher</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4507,8 +4515,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARABlAGYAYQB1AGwAdAAgAEMAbwBuAGYAaQBnAHUAcgBhAHQA
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>_Built</td><td>bnetsw_1_bnetswitchersetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>SteamAccountSwitcher.Primary_output</td><td>BnetSwitcherSetup_Files</td><td/><td/><td/><td>_Built_94EE4EF80A8B46E6AEE772A49842A75D.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>SteamAccountSwitcher.Primary_output</td><td>BnetSwitcherSetup_Files</td><td/><td/><td/><td>_Built1_CB2F1246A1F14720B8A48C74232197E4.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built2</td><td>battle_1.net_battle.net_switcher</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>Battle.net_switcher.Primary_output</td><td>BnetSwitcherSetup_Files</td><td/><td/><td/><td>_Built2_4625157948FE4DCCB2BC7AD279534D65.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

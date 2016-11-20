@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamAccountSwitcher", "SteamAccountSwitcher\SteamAccountSwitcher.csproj", "{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle.net switcher", "SteamAccountSwitcher\Battle.net switcher.csproj", "{87F5B85B-F4AB-47DA-AFD7-97CC7E450E12}"
 EndProject
 Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "BnetSwitcherSetup", "BnetSwitcherSetup\BnetSwitcherSetup.isproj", "{C396D101-B4B6-46C9-97F0-BEAFC46D7E4F}"
 	ProjectSection(ProjectDependencies) = postProject
