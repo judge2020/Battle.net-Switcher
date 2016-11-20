@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using AutoHotkey.Interop;
 
 namespace SteamAccountSwitcher
 {
@@ -52,7 +53,7 @@ namespace SteamAccountSwitcher
             
             if (File.Exists(_installDir))
             {
-                Process proc = Process.Start(Environment.SystemDirectory + @"\cmd.exe", "cmd /k \"\"c:\\Program Files (x86)\\Battle.net\\Battle.net.exe\" \"--exec=\"logout\"\"\" && exit");
+                Process proc = Process.Start(Environment.SystemDirectory + @"\cmd.exe", "cmd /k \"\"" + InstallDir + "\" \"--exec=\"logout\"\"\" && exit");
                 if (proc != null)
                 {
                     proc.StartInfo.CreateNoWindow = true;
@@ -75,12 +76,22 @@ namespace SteamAccountSwitcher
             {
                 DownloadMissing.Download();
             }
-            Process ahk = new Process {StartInfo = new ProcessStartInfo("main.ahk", b.Username + " " + b.Password)};
+            Process ahk = new Process {StartInfo = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + @"\main.ahk", b.Username + " " + b.Password)};
             ahk.Start();
             return true;
         }
+        /*public bool StartAhk()
+        {
+            if (DownloadMissing.CheckIfMissing())
+            {
+                DownloadMissing.Download();
+            }
+            AutoHotkeyEngine ahk = AutoHotkeyEngine.Instance;
+            ahk.LoadFile(AppDomain.CurrentDomain.BaseDirectory + @"\main.ahk");
 
-
+            return true;
+        }
+        */
         
     }
 }

@@ -56,6 +56,10 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoHotkey.Interop">
+      <HintPath>..\..\..\..\Source\Repos\AutoHotkey.Interop\src\AutoHotkey.Interop\bin\Release\AutoHotkey.Interop.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />

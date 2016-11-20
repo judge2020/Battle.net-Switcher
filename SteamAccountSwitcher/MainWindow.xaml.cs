@@ -36,7 +36,10 @@ namespace SteamAccountSwitcher
         public MainWindow()
         {
             InitializeComponent();
-
+            if (DownloadMissing.CheckIfMissing())
+            {
+                DownloadMissing.Download();
+            }
             this.Top = Properties.Settings.Default.Top;
             this.Left = Properties.Settings.Default.Left;
             this.Height = Properties.Settings.Default.Height;
@@ -73,7 +76,7 @@ namespace SteamAccountSwitcher
                 accountList.InstallDir = SelectSteamFile(@"C:\Program Files (x86)\Battle.net");
                 if(accountList.InstallDir == null)
                 {
-                    MessageBox.Show("You cannot use Battle.net without selecting your Battle.net.exe. Program will close now.", "BNET missing", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("You cannot use Battle.net switcher without selecting your Battle.net.exe. Program will close now.", "BNET missing", MessageBoxButton.OK, MessageBoxImage.Error);
                     Close();
                 }
             }
