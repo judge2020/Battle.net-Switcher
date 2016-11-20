@@ -9,7 +9,7 @@
         <Label Content="Profile name" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
         <TextBox x:Name="textBoxProfilename" HorizontalAlignment="Left" Height="23" Margin="92,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
 
-        <Label Content="Username" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
         <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Height="23" Margin="92,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
 
         <Label Content="Password" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>

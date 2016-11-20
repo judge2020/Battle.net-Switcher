@@ -32,7 +32,7 @@ namespace SteamAccountSwitcher
         Steam steam;
 
         string settingsSave;
-
+        private string basicPassword = "awyG10QkHne4KJI5wR9965y9cIfXZadQ";
         public MainWindow()
         {
             InitializeComponent();
@@ -118,14 +118,16 @@ namespace SteamAccountSwitcher
         public void WriteAccountsToFile()
         {
             string xmlAccounts = this.ToXML<AccountList>(accountList);
-            StreamWriter file = new System.IO.StreamWriter(settingsSave + "\\accounts.ini");
-            file.Write(xmlAccounts);
+            
+            StreamWriter file = new System.IO.StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini");
+            file.Write(Crypto.Encrypt(xmlAccounts));
+            
             file.Close();
         }
 
         public void ReadAccountsFromFile()
         {
-            string text = System.IO.File.ReadAllText(settingsSave + "\\accounts.ini");
+            string text = Crypto.Decrypt(System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini"));
             accountList = FromXML<AccountList>(text);
         }
 
