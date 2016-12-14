@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SteamAccountSwitcher
 {
@@ -19,6 +20,7 @@ namespace SteamAccountSwitcher
         }
         public static void Download()
         {
+            
             _client.DownloadFile("https://raw.githubusercontent.com/judge2020/Battle.net-Switcher/gh-pages/bin/latest/main.ahk", AppDomain.CurrentDomain.BaseDirectory + @"\main.ahk");
         }
     }
