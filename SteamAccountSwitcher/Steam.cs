@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
-using AutoHotkey.Interop;
 
 namespace SteamAccountSwitcher
 {
