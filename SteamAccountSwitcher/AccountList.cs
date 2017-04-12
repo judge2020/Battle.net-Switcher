@@ -1,33 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SteamAccountSwitcher
 {
     public class AccountList
     {
-        string installDir;
-        List<SteamAccount> accounts;
-
-        public AccountList()
+	    public AccountList()
         {
-            accounts = new List<SteamAccount>();
+            Accounts = new List<SteamAccount>();
         }
 
-        public string InstallDir
-        {
-            get { return installDir; }
-            set { installDir = value; }
-        }
+        public string InstallDir { get; set; }
 
-        public List<SteamAccount> Accounts
-        {
-            get { return accounts; }
-            set { accounts = value; }
-        }
-
-        
+	    public List<SteamAccount> Accounts { get; }
     }
 }

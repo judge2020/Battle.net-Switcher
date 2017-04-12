@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SteamAccountSwitcher
 {
@@ -18,18 +7,13 @@ namespace SteamAccountSwitcher
     /// Interaction logic for AddAccount.xaml
     /// </summary>
     
-    public partial class AddAccount : Window
+    public partial class AddAccount
     {
-        SteamAccount account;
-        
-        public SteamAccount Account
-        {
-            get { return account; }
-        }
+	    public SteamAccount Account { get; private set; }
 
-        public AddAccount()
+	    public AddAccount()
         {
-            account = new SteamAccount();
+            Account = new SteamAccount();
             InitializeComponent();
             comboBoxType.ItemsSource = Enum.GetValues(typeof(AccountType));
         }
@@ -37,7 +21,7 @@ namespace SteamAccountSwitcher
         public AddAccount(SteamAccount editAccount)
         {
             InitializeComponent();
-            account = editAccount;
+            Account = editAccount;
             comboBoxType.ItemsSource = Enum.GetValues(typeof(AccountType));
 
             comboBoxType.SelectedItem = editAccount.Type;
@@ -51,25 +35,25 @@ namespace SteamAccountSwitcher
         {
             try
             {
-                account.Type = (AccountType)comboBoxType.SelectedItem;
-                account.Name = textBoxProfilename.Text;
-                account.Username = textBoxUsername.Text;
-                account.Password = textBoxPassword.Password;
+                Account.Type = (AccountType)comboBoxType.SelectedItem;
+                Account.Name = textBoxProfilename.Text;
+                Account.Username = textBoxUsername.Text;
+                Account.Password = textBoxPassword.Password;
             }
             catch
             {
-                account = null;
+                Account = null;
             }
             Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (account != null)
+            if (Account != null)
             {
-                if (account.Username == "" || account.Username == null)
+                if (Account.Username == "" || Account.Username == null)
                 {
-                    account = null;
+                    Account = null;
                 }
             }
         }

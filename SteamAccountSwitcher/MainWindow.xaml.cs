@@ -1,24 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Diagnostics;
 using System.IO;
 using System.Xml.Serialization;
 using System.ComponentModel;
 using Microsoft.Win32;
 using System.Reflection;
-
 namespace SteamAccountSwitcher
 {
     /// ****
@@ -26,36 +15,32 @@ namespace SteamAccountSwitcher
     /// Copyright by Christoph Wedenig
     /// ****
     
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        AccountList accountList;
-        Steam steam;
+	    private AccountList _accountList;
+	    private readonly Steam _steam;
 
-        string settingsSave;
-        private string basicPassword = "awyG10QkHne4KJI5wR9965y9cIfXZadQ";
-        public MainWindow()
+	    public MainWindow()
         {
             InitializeComponent();
-            if (DownloadMissing.CheckIfMissing())
-            {
-                DownloadMissing.Download();
-            }
-            this.Top = Properties.Settings.Default.Top;
-            this.Left = Properties.Settings.Default.Left;
-            this.Height = Properties.Settings.Default.Height;
-            this.Width = Properties.Settings.Default.Width;
+
+			UpdateManager.Updater();
+            Top = Properties.Settings.Default.Top;
+            Left = Properties.Settings.Default.Left;
+            Height = Properties.Settings.Default.Height;
+            Width = Properties.Settings.Default.Width;
 
             if (Properties.Settings.Default.Maximized)
             {
                 WindowState = WindowState.Maximized;
             }
 
-            accountList = new AccountList();
+            _accountList = new AccountList();
             
             //Get directory of Executable
-            settingsSave = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).TrimStart(@"file:\\".ToCharArray());
+            //GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase)?.TrimStart(@"file:\\".ToCharArray());
 
-            this.buttonInfo.ToolTip = "Build Version: " + Assembly.GetEntryAssembly().GetName().Version.ToString();
+            buttonInfo.ToolTip = "Build Version: " + Assembly.GetEntryAssembly().GetName().Version;
 
             try
             {
@@ -68,20 +53,20 @@ namespace SteamAccountSwitcher
 
             
 
-            listBoxAccounts.ItemsSource = accountList.Accounts;
+            listBoxAccounts.ItemsSource = _accountList.Accounts;
             listBoxAccounts.Items.Refresh();
 
-            if (accountList.InstallDir == "" || (accountList.InstallDir == null))
+            if (_accountList.InstallDir == "" || (_accountList.InstallDir == null))
             {
-                accountList.InstallDir = SelectSteamFile(@"C:\Program Files (x86)\Battle.net");
-                if(accountList.InstallDir == null)
+                _accountList.InstallDir = SelectSteamFile(@"C:\Program Files (x86)\Battle.net");
+                if(_accountList.InstallDir == null)
                 {
                     MessageBox.Show("You cannot use Battle.net switcher without selecting your Battle.net.exe. Program will close now.", "BNET missing", MessageBoxButton.OK, MessageBoxImage.Error);
                     Close();
                 }
             }
 
-            steam = new Steam(accountList.InstallDir);
+            _steam = new Steam(_accountList.InstallDir);
             
         }
 
@@ -98,7 +83,7 @@ namespace SteamAccountSwitcher
 
         private void buttonLogout_Click(object sender, RoutedEventArgs e)
         {
-            steam.LogoutSteam();
+            _steam.LogoutSteam();
         }
 
         private void buttonAddAccount_Click(object sender, RoutedEventArgs e)
@@ -109,17 +94,17 @@ namespace SteamAccountSwitcher
 
             if (newAccWindow.Account != null)
             {
-                accountList.Accounts.Add(newAccWindow.Account);
+                _accountList.Accounts.Add(newAccWindow.Account);
 
                 listBoxAccounts.Items.Refresh();
             }
         }
 
-        public void WriteAccountsToFile()
+	    private void WriteAccountsToFile()
         {
-            string xmlAccounts = this.ToXML<AccountList>(accountList);
+            var xmlAccounts = ToXML(_accountList);
             
-            StreamWriter file = new System.IO.StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini");
+            var file = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini");
             file.Write(Crypto.Encrypt(xmlAccounts));
             
             file.Close();
@@ -127,11 +112,11 @@ namespace SteamAccountSwitcher
 
         public void ReadAccountsFromFile()
         {
-            string text = Crypto.Decrypt(System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini"));
-            accountList = FromXML<AccountList>(text);
+            var text = Crypto.Decrypt(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini"));
+            _accountList = FromXml<AccountList>(text);
         }
 
-        public static T FromXML<T>(string xml)
+        public static T FromXml<T>(string xml)
         {
             using (StringReader stringReader = new StringReader(xml))
             {
@@ -153,7 +138,7 @@ namespace SteamAccountSwitcher
         private void listBoxAccounts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             SteamAccount selectedAcc = (SteamAccount)listBoxAccounts.SelectedItem;
-            steam.StartSteamAccount(selectedAcc);
+            _steam.StartSteamAccount(selectedAcc);
         }
 
 
@@ -167,7 +152,7 @@ namespace SteamAccountSwitcher
 
                 if (newAccWindow.Account.Username != "" && newAccWindow.Account.Password != "")
                 {
-                    accountList.Accounts[listBoxAccounts.SelectedIndex] = newAccWindow.Account;
+                    _accountList.Accounts[listBoxAccounts.SelectedIndex] = newAccWindow.Account;
 
                     listBoxAccounts.Items.Refresh();
                 }
@@ -189,10 +174,10 @@ namespace SteamAccountSwitcher
             }
             else
             {
-                Properties.Settings.Default.Top = this.Top;
-                Properties.Settings.Default.Left = this.Left;
-                Properties.Settings.Default.Height = this.Height;
-                Properties.Settings.Default.Width = this.Width;
+                Properties.Settings.Default.Top = Top;
+                Properties.Settings.Default.Left = Left;
+                Properties.Settings.Default.Height = Height;
+                Properties.Settings.Default.Width = Width;
                 Properties.Settings.Default.Maximized = false;
             }
 
@@ -207,7 +192,7 @@ namespace SteamAccountSwitcher
             MessageBoxResult dialogResult = MessageBox.Show("Are you sure you want to delete the '" + selectedAcc.Name + "' account?", "Delete Account", MessageBoxButton.YesNo);
             if (dialogResult == MessageBoxResult.Yes)
             {
-                accountList.Accounts.Remove((SteamAccount)listBoxAccounts.SelectedItem);
+                _accountList.Accounts.Remove((SteamAccount)listBoxAccounts.SelectedItem);
                 listBoxAccounts.Items.Refresh();
             }
             else if (dialogResult == MessageBoxResult.No)

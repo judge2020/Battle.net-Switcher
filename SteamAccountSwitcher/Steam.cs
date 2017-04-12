@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Windows;
 
 namespace SteamAccountSwitcher
 {
@@ -72,22 +71,7 @@ namespace SteamAccountSwitcher
             {
                 LogoutSteam();
             }
-            if (DownloadMissing.CheckIfMissing())
-            {
-
-                var messBox = MessageBox.Show("Autohotkey file not found. Would you like to download it? \n Clicking yes will download from github over HTTPS \n Clicking no will prevent login. ", "Battle.net Switcher", MessageBoxButton.YesNo);
-                if (messBox == MessageBoxResult.Yes)
-                {
-                    DownloadMissing.Download();
-                }
-                else
-                {
-                    return false;
-                }
-
-
-               
-            }
+            UpdateManager.Updater();
             Process ahk = new Process {StartInfo = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + @"\main.ahk", b.Username + " " + b.Password)};
             ahk.Start();
             return true;
