@@ -3,7 +3,7 @@ passwrd = %2%
 
 Checkd()
 {
-    WinWait Blizzard App Login, ,3
+    WinWait Blizzard Battle.net Login, ,3
     WinMove 0, 0
     WinActivate
     
