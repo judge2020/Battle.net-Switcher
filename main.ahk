@@ -6,7 +6,7 @@ Checkd()
     WinWait Blizzard Battle.net Login, ,3
     WinMove 0, 0
     WinActivate
-    
+
     IfWinNotActive
     {
         Checkd()
@@ -25,7 +25,7 @@ Checkd()
 ClickFromTopRight(42,200)
 Send ^a
 Send {BS}
-send %email%
+sendraw %email%
 sleep 20
 Sleep 100
 ClickFromTopRight(42,250)
@@ -33,7 +33,7 @@ Sleep 20
 ClickFromTopRight(42,250)
 Send ^a
 Send {BS}
-send %passwrd%
+sendraw %passwrd%
 Send {Enter}
 exit
 
@@ -49,4 +49,3 @@ _X := width - _X
 Click %_X%, %_Y%
 
 }
-
