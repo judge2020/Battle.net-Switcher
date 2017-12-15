@@ -58,7 +58,7 @@ namespace SteamAccountSwitcher
 
             if (_accountList.InstallDir == "" || (_accountList.InstallDir == null))
             {
-                _accountList.InstallDir = SelectSteamFile(@"C:\Program Files (x86)\Battle.net");
+                _accountList.InstallDir = SelectSteamFile();
                 if(_accountList.InstallDir == null)
                 {
                     MessageBox.Show("You cannot use Battle.net switcher without selecting your Battle.net.exe. Program will close now.", "BNET missing", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -70,13 +70,36 @@ namespace SteamAccountSwitcher
             
         }
 
-        private string SelectSteamFile(string initialDirectory)
+        static string GetApplicationDirectory()
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter =
-               "Bnet |Battle.net.exe";
-            dialog.InitialDirectory = initialDirectory;
-            dialog.Title = "Select your Battle.net Installation";
+            var programFiles = "";
+            if (8 == IntPtr.Size
+                || !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432")))
+            {
+                programFiles = Environment.GetEnvironmentVariable("ProgramFiles(x86)");
+            }
+            else
+            {
+                programFiles = Environment.GetEnvironmentVariable("ProgramFiles");
+            }
+            var blizzardApp = Path.Combine(programFiles, "Blizzard App");
+            var battleNet = Path.Combine(programFiles, "Battle.net");
+            if (Directory.Exists(blizzardApp))
+                return blizzardApp;
+            if (Directory.Exists(battleNet))
+                return battleNet;
+            return programFiles;
+        }
+
+        private string SelectSteamFile()
+        {
+            MessageBox.Show(GetApplicationDirectory());
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "Blizzard Battle.net|Battle.net.exe",
+                InitialDirectory = GetApplicationDirectory(),
+                Title = "Select your Blizzard Battle.net Installation"
+            };
             return (dialog.ShowDialog() == true)
                ? dialog.FileName : null;
         }
