@@ -24,7 +24,7 @@ namespace BattlenetAccountSwitcher
         {
             InitializeComponent();
 
-			UpdateManager.Updater();
+			FileUpdateManager.Updater();
             Top = Properties.Settings.Default.Top;
             Left = Properties.Settings.Default.Left;
             Height = Properties.Settings.Default.Height;
@@ -67,7 +67,8 @@ namespace BattlenetAccountSwitcher
             }
 
             _steam = new Steam(_accountList.InstallDir);
-            
+
+            FileUpdateManager.PerformStartupCheck();
         }
 
         static string GetApplicationDirectory()
