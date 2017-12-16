@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 using System.ComponentModel;
 using Microsoft.Win32;
 using System.Reflection;
-namespace SteamAccountSwitcher
+namespace BattlenetAccountSwitcher
 {
     /// ****
     /// SteamAccountSwitcher

@@ -1,4 +1,4 @@
-﻿namespace SteamAccountSwitcher
+﻿namespace BattlenetAccountSwitcher
 {
     public class SteamAccount
     {

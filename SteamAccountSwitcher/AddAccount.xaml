@@ -1,4 +1,4 @@
-﻿<Window x:Class="SteamAccountSwitcher.AddAccount"
+﻿<Window x:Class="BattlenetAccountSwitcher.AddAccount"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Add Account" Height="215" Width="326" ResizeMode="NoResize" Closing="Window_Closing" WindowStartupLocation="CenterOwner">

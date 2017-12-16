@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace SteamAccountSwitcher
+namespace BattlenetAccountSwitcher
 {
     /// <summary>
     /// Interaction logic for AddAccount.xaml

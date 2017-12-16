@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 
-namespace SteamAccountSwitcher
+namespace BattlenetAccountSwitcher
 {
 	static class UpdateManager
 	{

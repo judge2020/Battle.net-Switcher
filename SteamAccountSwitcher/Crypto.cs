@@ -3,7 +3,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace SteamAccountSwitcher
+namespace BattlenetAccountSwitcher
 {
     class Crypto
     {
