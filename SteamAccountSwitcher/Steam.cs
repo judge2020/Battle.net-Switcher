@@ -98,7 +98,7 @@ namespace BattlenetAccountSwitcher
                 LogoutSteam();
             }
             FileUpdateManager.Updater();
-            Process ahk = new Process {StartInfo = new ProcessStartInfo(AppDomain.CurrentDomain.BaseDirectory + @"\main.ahk", b.Username + " " + b.Password)};
+            Process ahk = new Process {StartInfo = new ProcessStartInfo(@"main.ahk", b.Username + " " + b.Password)};
             ahk.Start();
             return true;
         }
