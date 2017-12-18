@@ -25,7 +25,6 @@ namespace BattlenetAccountSwitcher
 			_dispatcher.Stop();
 			try
 			{
-				MessageBox.Show("f");
 				using (var mgr = await GetUpdateManager())
 					await SquirrelUpdate(mgr);
 			}
@@ -93,18 +92,6 @@ namespace BattlenetAccountSwitcher
 			return current.Major == latest.Major && current.Minor == latest.Minor && current.Build == latest.Build
 				   && current.Revision < latest.Revision;
 		}
-
-
-
-
-
-
-
-
-
-
-
-
 
 		static bool RequiresUpdate()
 		{

@@ -20,11 +20,32 @@ namespace BattlenetAccountSwitcher
 	    private AccountList _accountList;
 	    private readonly Steam _steam;
 
-	    public MainWindow()
+        string _appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+        public MainWindow()
         {
+
+            try
+            {
+                // Set application directory to %appdata%
+                // Ref: https://github.com/ProAltis/Launcher/blob/master/ProjectAltisLauncher/Program.cs#L35
+                string filesDir = Path.Combine(_appDataPath, "battlenetswitcher");
+                if (!Directory.Exists(filesDir))
+                    Directory.CreateDirectory(filesDir);
+                Directory.SetCurrentDirectory(filesDir);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                MessageBox.Show($"There was an error creating the installation directory:" +
+                                $"\n{e.Message}\nPlease report this on the github page:\n" +
+                                $"https://github.com/Squirrel/Squirrel.Windows/issues");
+                Environment.Exit(0);
+            }
             InitializeComponent();
 
-			FileUpdateManager.Updater();
+            FileUpdateManager.Updater();
+
             Top = Properties.Settings.Default.Top;
             Left = Properties.Settings.Default.Left;
             Height = Properties.Settings.Default.Height;
@@ -68,7 +89,9 @@ namespace BattlenetAccountSwitcher
 
             _steam = new Steam(_accountList.InstallDir);
 
+#if !DEBUG
             FileUpdateManager.PerformStartupCheck();
+#endif
         }
 
         static string GetApplicationDirectory()
@@ -94,7 +117,6 @@ namespace BattlenetAccountSwitcher
 
         private string SelectSteamFile()
         {
-            MessageBox.Show(GetApplicationDirectory());
             OpenFileDialog dialog = new OpenFileDialog
             {
                 Filter = "Blizzard Battle.net|Battle.net.exe",
@@ -128,7 +150,7 @@ namespace BattlenetAccountSwitcher
         {
             var xmlAccounts = ToXML(_accountList);
             
-            var file = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini");
+            var file = new StreamWriter("accounts.ini");
             file.Write(Crypto.Encrypt(xmlAccounts));
             
             file.Close();
@@ -136,7 +158,7 @@ namespace BattlenetAccountSwitcher
 
         public void ReadAccountsFromFile()
         {
-            var text = Crypto.Decrypt(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\accounts.ini"));
+            var text = Crypto.Decrypt(File.ReadAllText(@"accounts.ini"));
             _accountList = FromXml<AccountList>(text);
         }
 

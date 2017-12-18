@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>b.net.switcher</id>
+        <version>1.2.0</version>
+        <title>Battle.net.Switcher</title>
+        <authors>judge2020</authors>
+        <owners>Hunter</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Easily switch battle.net accounts</description>
+        <copyright>2017 Hunter Ray</copyright>
+    </metadata>
+    <files>
+        <file src="SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe" target="lib\net45\BattlenetAccountSwitcher.exe" />
+        <file src="SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe.config" target="lib\net45\BattlenetAccountSwitcher.exe.config" />
+        <file src="SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\SharpCompress.dll" target="lib\net45\SharpCompress.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Splat.dll" target="lib\net45\Splat.dll" />
+        <file src="SteamAccountSwitcher\bin\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+    </files>
+</package>
