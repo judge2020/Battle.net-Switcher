@@ -1,0 +1,60 @@
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe.config
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.pdb
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Mdb.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Pdb.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Rocks.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\NuGet.Squirrel.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\SharpCompress.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Splat.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Squirrel.dll
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\NuGet.Squirrel.pdb
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Splat.pdb
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\bin\Release\Squirrel.pdb
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csprojResolveAssemblyReference.cache
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\AddAccount.baml
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\MainWindow.baml
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\AddAccount.g.cs
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\MainWindow.g.cs
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\App.g.cs
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher_MarkupCompile.cache
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.g.resources
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.Properties.Resources.resources
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csproj.GenerateResource.Cache
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csproj.CoreCompileInputs.cache
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.exe
+C:\Users\hunte\Documents\github\Battle.net-Switcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.pdb
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe.config
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.exe
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\BattlenetAccountSwitcher.pdb
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Mdb.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Pdb.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Mono.Cecil.Rocks.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\NuGet.Squirrel.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\SharpCompress.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Splat.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Squirrel.dll
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\NuGet.Squirrel.pdb
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Splat.pdb
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\bin\Release\Squirrel.pdb
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csprojResolveAssemblyReference.cache
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\AddAccount.baml
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\MainWindow.baml
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\AddAccount.g.cs
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\MainWindow.g.cs
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\App.g.cs
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher_MarkupCompile.cache
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.g.resources
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.Properties.Resources.resources
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csproj.GenerateResource.Cache
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\Battle.net switcher.csproj.CoreCompileInputs.cache
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.exe
+C:\Users\hunte\Documents\github\Battle.netSwitcher\SteamAccountSwitcher\obj\Release\BattlenetAccountSwitcher.pdb

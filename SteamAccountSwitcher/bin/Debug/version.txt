@@ -1,0 +1,1 @@
+12.01.17 - Update to fix the issues with the characters ^+!#{}. There is still an issue with the grave accent character `. You can always view changes on the github at https://github.com/judge2020/Battle.net-Switcher.
