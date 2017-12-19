@@ -1,8 +1,0 @@
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\bin\Debug\HS.Logging.dll
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\bin\Debug\HS.Logging.pdb
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\obj\Debug\HS.Logging.dll
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\obj\Debug\HS.Logging.pdb
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\bin\Debug\lib\HS.Logging.dll
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\bin\Debug\lib\HS.Logging.pdb
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\lib\HS.Logging.dll
-C:\Users\hunte\Documents\Github\HS.Logging\HS.Logging\lib\HS.Logging.pdb
