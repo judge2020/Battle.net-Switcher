@@ -156,6 +156,7 @@
     </Compile>
     <Compile Include="Crypto.cs" />
     <Compile Include="Steam.cs" />
+    <Compile Include="AutoStart.cs" />
     <Compile Include="SteamAccount.cs" />
     <Compile Include="FileUpdateManager.cs" />
     <Page Include="AddAccount.xaml">

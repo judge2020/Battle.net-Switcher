@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BattlenetAccountSwitcher
 {
@@ -16,6 +17,7 @@ namespace BattlenetAccountSwitcher
         public Steam(string installDir)
         {
             _installDir = installDir;
+            _autoStartOccurancess = 0;
         }
 
         public string InstallDir
@@ -71,6 +73,67 @@ namespace BattlenetAccountSwitcher
             myTimer.Start();
         }
 
+        private System.Windows.Forms.Timer _autoStarTimer;
+        private int _autoStartOccurancess;
+        private SteamAccount _recentSteamAccount;
+        public void HandleAutoStart(object sender, EventArgs ev)
+        {
+            _autoStartOccurancess += 1;
+            if (_autoStartOccurancess >= 15)
+            {
+                // Handle if bnet never opens for 15 seconds
+                _autoStartOccurancess = 0;
+                _autoStarTimer.Stop();
+                return;
+            }
+            // look for the battle.net main window
+
+            Process[] processlist = Process.GetProcesses();
+            foreach (var process in processlist)
+            {
+                if (process.MainWindowTitle != "Blizzard Battle.net") continue;
+                _autoStartOccurancess = 16;
+                switch (_recentSteamAccount.AutoStart)
+                {
+                    case AutoStart.None:
+                        break;
+                    case AutoStart.Warcraft:
+                        Process.Start("battlenet://WoW");
+                        break;
+                    case AutoStart.Diablo3:
+                        Process.Start("battlenet://D3");
+                        break;
+                    case AutoStart.Starcraft2:
+                        Process.Start("battlenet://SC2");
+                        break;
+                    case AutoStart.Hearthstone:
+                        Process.Start("battlenet://WTCG");
+                        break;
+                    case AutoStart.HOTS:
+                        Process.Start("battlenet://Hero");
+                        break;
+                    case AutoStart.Overwatch:
+                        Process.Start("battlenet://Pro");
+                        break;
+                    case AutoStart.Starcraft1:
+                        Process.Start("battlenet://SC1");
+                        break;
+                    case AutoStart.Destiny2:
+                        Process.Start("battlenet://dst2");
+                        break;
+                }
+            }
+        }
+
+        public void ScheduleHandleAutoStart()
+        {
+            _autoStarTimer = new System.Windows.Forms.Timer
+            {
+                Interval = 1000
+            };
+            _autoStarTimer.Tick += HandleAutoStart;
+            _autoStarTimer.Start();
+        }
 
         public bool LogoutSteam()
         {
@@ -100,6 +163,8 @@ namespace BattlenetAccountSwitcher
             FileUpdateManager.Updater();
             Process ahk = new Process {StartInfo = new ProcessStartInfo(@"main.ahk", b.Username + " " + b.Password)};
             ahk.Start();
+            _recentSteamAccount = b;
+            ScheduleHandleAutoStart();
             return true;
         }
         /*public bool StartAhk()

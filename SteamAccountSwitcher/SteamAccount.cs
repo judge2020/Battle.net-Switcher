@@ -10,6 +10,8 @@
 
 	    public AccountType Type { get; set; }
 
+	    public AutoStart AutoStart { get; set; } = AutoStart.None;
+
 	    public override string ToString()
         {
             return Name + "~ (user: " + Username + ")";

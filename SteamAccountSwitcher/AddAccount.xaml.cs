@@ -16,6 +16,7 @@ namespace BattlenetAccountSwitcher
             Account = new SteamAccount();
             InitializeComponent();
             comboBoxType.ItemsSource = Enum.GetValues(typeof(AccountType));
+            ComboBoxAutoStart.ItemsSource = Enum.GetValues(typeof(AutoStart));
         }
 
         public AddAccount(SteamAccount editAccount)
@@ -23,8 +24,10 @@ namespace BattlenetAccountSwitcher
             InitializeComponent();
             Account = editAccount;
             comboBoxType.ItemsSource = Enum.GetValues(typeof(AccountType));
+            ComboBoxAutoStart.ItemsSource = Enum.GetValues(typeof(AutoStart));
 
             comboBoxType.SelectedItem = editAccount.Type;
+            ComboBoxAutoStart.SelectedItem = editAccount.AutoStart;
             textBoxProfilename.Text = editAccount.Name;
             textBoxUsername.Text = editAccount.Username;
             textBoxPassword.Password = editAccount.Password;
@@ -36,6 +39,7 @@ namespace BattlenetAccountSwitcher
             try
             {
                 Account.Type = (AccountType)comboBoxType.SelectedItem;
+                Account.AutoStart = (AutoStart) ComboBoxAutoStart.SelectedItem;
                 Account.Name = textBoxProfilename.Text;
                 Account.Username = textBoxUsername.Text;
                 Account.Password = textBoxPassword.Password;
@@ -51,7 +55,7 @@ namespace BattlenetAccountSwitcher
         {
             if (Account != null)
             {
-                if (Account.Username == "" || Account.Username == null)
+                if (string.IsNullOrEmpty(Account.Username))
                 {
                     Account = null;
                 }
